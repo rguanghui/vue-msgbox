@@ -4,8 +4,8 @@
   "description": "A message box (like Sweet Alert) for vue.js.",
   "main": "lib/vue-msgbox.js",
   "scripts": {
-    "dev": "webpack-dev-server --config ./webpack.example.config.js --inline --hot",
-    "remote-dev": "webpack-dev-server --config ./webpack.example.config.js --inline --hot --host",
+    "dev": "webpack-dev-server --config ./webpack.example.config.js --inline --hot --port",
+    "remote-dev": "webpack-dev-server --config ./webpack.example.config.js --inline --hot --port 8005 --host",
     "build": "webpack -p",
     "prepublish": "webpack -p"
   },
@@ -33,6 +33,8 @@
     "eslint-loader": "^1.1.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
+    "postcss-cssnext": "^2.6.0",
+    "postcss-flex-fallback": "^0.1.1",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "vue-hot-reload-api": "^1.2.2",

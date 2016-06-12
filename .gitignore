@@ -4,4 +4,5 @@ dist
 coverage
 .idea
 .jshintrc
+*.log
 /lib/
