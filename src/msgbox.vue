@@ -113,7 +113,6 @@
         <div class="msgbox-close d-icon icon-close" @click="handleAction('close')"></div>
       </div>
       <div class="msgbox-content" v-if="message !== ''">
-        <div class="msgbox-status d-icon {{ type ? 'icon-' + type : '' }}"></div>
         <div class="msgbox-message"><p>{{ message }}</p></div>
         <div class="msgbox-input" v-show="showInput">
           <input type="text" v-model="inputValue" :placeholder="inputPlaceholder" />

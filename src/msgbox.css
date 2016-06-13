@@ -19,17 +19,15 @@
 }
 
 .msgbox-header {
-  padding: 25px 24px 0;
+  margin: 25px 24px 10px;
   text-align: center;
   font-weight: bold;
   font-size: 18px;
 }
 
 .msgbox-content {
-  padding: 10px 24px;
-  min-height: 36px;
+  margin: 10px 24px 18px;
   position: relative;
-  border-bottom: 1px solid var(--color-border);
 }
 
 .msgbox-close {
@@ -58,31 +56,10 @@
   min-height: 16px;
 }
 
-.msgbox-status {
-  float: left;
-  width: 36px;
-  height: 36px;
-  font-size: 36px !important;
-}
-
-.msgbox-status.icon-success {
-  color: #94c852;
-}
-
-.msgbox-status.icon-warning {
-  color: #ff9c00;
-}
-
-.msgbox-status.icon-error {
-  color: #ff4248;
-}
-
 .msgbox-message {
   color: #333;
   font-size: 16px;
-  line-height: 36px;
-  margin-left: 36px;
-  margin-right: 36px;
+  line-height: 1.2em;
   text-align: center;
 }
 
@@ -91,6 +68,7 @@
   height: 40px;
   line-height: 40px;
   text-align: center;
+  border-top: 1px solid var(--color-border);
 }
 
 .msgbox-btn {
