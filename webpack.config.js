@@ -5,7 +5,7 @@ options.output = {
   library: 'VueMsgbox',
   libraryTarget: 'umd',
   filename: 'vue-msgbox.js',
-  path: './lib'
+  path: './dist'
 };
 options.externals = {
   vue: {

@@ -1,6 +1,6 @@
 {
   "name": "vue-msgbox",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "A message box (like Sweet Alert) for vue.js.",
   "main": "lib/vue-msgbox.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ElemeFE/vue-msgbox.git"
+    "url": "https://github.com/rguanghui/vue-msgbox.git"
   },
   "keywords": [
     "message box",

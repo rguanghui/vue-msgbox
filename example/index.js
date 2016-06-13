@@ -12,7 +12,8 @@ document.querySelector('[showbase]').addEventListener('click', () => {
     title: 'I\'m a title',
     message: 'I\'m a message',
     type: 'success',
-    showCancelButton: true
+    showCancelButton: true,
+    confirmButtonHighlight: true,
   }, function(action) {
     console.log('callback:', action);
     MessageBox.alert('Clicked: ' + action);

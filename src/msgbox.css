@@ -1,6 +1,7 @@
 :root {
   --color-border: #ccc;
 }
+
 .msgbox {
   position: fixed;
   top: 50%;
@@ -18,19 +19,20 @@
 }
 
 .msgbox-header {
-  padding: 15px 20px 5px 10px;
-  border-bottom: 1px solid var(--color-border);
+  padding: 25px 24px 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .msgbox-content {
-  padding: 10px 20px;
+  padding: 10px 24px;
   min-height: 36px;
   position: relative;
   border-bottom: 1px solid var(--color-border);
 }
 
 .msgbox-close {
-  display: inline-block;
   position: absolute;
   top: 14px;
   right: 15px;
@@ -46,20 +48,14 @@
   border-radius: 5px;
   padding: 4px 5px;
   width: 100%;
+  outline: none;
+  box-sizing: border-box;
 }
 
 .msgbox-errormsg {
   color: red;
   font-size: 12px;
   min-height: 16px;
-}
-
-.msgbox-title {
-  padding-left: 10px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 8px;
 }
 
 .msgbox-status {
@@ -109,16 +105,11 @@
   font-size: 17px;
 
   &:active {
-    background-color: var(--color-border);
+    background-color: #ddd;
   }
 }
 
-.msgbox-confirm {
-  width: 50%;
-}
-
 .msgbox-cancel {
-  width: 50%;
   border-right: 1px solid var(--color-border);
 }
 
@@ -129,14 +120,14 @@
 
 .msgbox-btns-reverse {
   flex-direction: row-reverse;
-}
 
-.msgbox-btns-reverse .msgbox-confirm {
-  border-right: 1px solid var(--color-border);
-}
+  & .msgbox-confirm {
+    border-right: 1px solid var(--color-border);
+  }
 
-.msgbox-btns-reverse .msgbox-cancel {
-  border-right: 0;
+  & .msgbox-cancel {
+    border-right: 0;
+  }
 }
 
 .pop-bounce-transition {
