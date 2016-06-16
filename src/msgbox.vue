@@ -16,6 +16,14 @@ export default {
     }
   },
 
+  ready() {
+    const viewport = document.querySelector('meta[name="viewport"]');
+    if (viewport) {
+      let value = (viewport.content.match(/initial-scale=(\d?\.?\d+)/) || [])[1];
+      this.viewportZoom = (1 / value).toFixed(2);
+    }
+  },
+
   computed: {
     confirmButtonClasses() {
       var classes = `msgbox-btn msgbox-confirm ${this.confirmButtonClass}`;
@@ -30,6 +38,9 @@ export default {
         classes += ' msgbox-cancel-highlight';
       }
       return classes;
+    },
+    showCancelButton() {
+      return this.cancelButtonText !== CANCEL_TEXT;
     }
   },
 
@@ -100,23 +111,34 @@ export default {
       cancelButtonHighlight: false,
 
       editorErrorMessage: null,
-      callback: null
+      callback: null,
+
+      viewportZoom: 1
     };
   }
-}
+};
 </script>
 
 <template>
 <div class="msgbox-wrapper">
-  <div class="msgbox" v-if="rendered" v-show="visible" transition="pop-bounce">
-
-    <div class="msgbox-header" v-if="title" v-html="title"></div>
+  <div class="msgbox"
+       v-if="rendered"
+       v-show="visible"
+       transition="pop-bounce"
+       :style="{zoom: viewportZoom}">
+    <!-- close button -->
     <span
       v-if="showCloseButton"
       class="msgbox-close"
       @click="handleAction('close')">&times;</span>
 
-    <div class="msgbox-content" v-if="message">
+    <div
+      class="msgbox-header"
+      v-if="title"
+      v-html="title"
+      :class="{collapseheight: title && message}"></div>
+
+    <div class="msgbox-content" v-if="message" :class="{collapseheight: title && message}">
       <div class="msgbox-message" v-html="message"></div>
       <div class="msgbox-input" v-show="showInput">
         <input type="text" v-model="inputValue" :placeholder="inputPlaceholder">

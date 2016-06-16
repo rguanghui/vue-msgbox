@@ -19,16 +19,26 @@
 }
 
 .msgbox-header {
-  margin: 25px 24px 10px;
+  margin: 10px 24px;
+  padding: 10px 0;
   text-align: center;
   font-weight: bold;
   font-size: 18px;
+
+  &.collapseheight {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 }
 
 .msgbox-content {
   margin: 10px 24px;
   padding: 10px 0;
   position: relative;
+
+  &.collapseheight {
+    margin-top: 0;
+  }
 }
 
 .msgbox-close {

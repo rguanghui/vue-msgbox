@@ -10,9 +10,8 @@ import MessageBox from '../src';
 document.querySelector('[showbase]').addEventListener('click', () => {
   MessageBox({
     title: 'I\'m a title',
-    message: '<em>I\'m a message</em>',
-    type: 'success',
-    showCancelButton: true,
+    // showCancelButton: true,
+    cancelButtonText: '清空',
     confirmButtonHighlight: true,
     showCloseButton: true,
   }, function(action) {
