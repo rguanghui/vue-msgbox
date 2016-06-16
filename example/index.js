@@ -10,10 +10,11 @@ import MessageBox from '../src';
 document.querySelector('[showbase]').addEventListener('click', () => {
   MessageBox({
     title: 'I\'m a title',
-    message: 'I\'m a message',
+    message: '<em>I\'m a message</em>',
     type: 'success',
     showCancelButton: true,
     confirmButtonHighlight: true,
+    showCloseButton: true,
   }, function(action) {
     console.log('callback:', action);
     MessageBox.alert('Clicked: ' + action);

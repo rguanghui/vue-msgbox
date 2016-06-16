@@ -6,6 +6,7 @@ var defaults = {
   message: '',
   type: '',
   showInput: false,
+  showCloseButton: false,
   inputValue: null,
   inputPlaceholder: '',
   inputPattern: null,

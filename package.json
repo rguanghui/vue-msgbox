@@ -1,6 +1,6 @@
 {
   "name": "vue-msgbox",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A message box (like Sweet Alert) for vue.js.",
   "main": "lib/vue-msgbox.js",
   "scripts": {
@@ -19,7 +19,7 @@
     "confirm",
     "vue"
   ],
-  "author": "long.zhang@ele.me",
+  "author": "long.zhang@ele.me, guanghui.ren@ele.me",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.3.15",
