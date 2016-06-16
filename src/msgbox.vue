@@ -22,6 +22,10 @@ export default {
       let value = (viewport.content.match(/initial-scale=(\d?\.?\d+)/) || [])[1];
       this.viewportZoom = (1 / value).toFixed(2);
     }
+
+    if (!this.showCancelButton && this.cancelButtonText !== CANCEL_TEXT) {
+      this.showCancelButton = true;
+    }
   },
 
   computed: {
@@ -38,9 +42,6 @@ export default {
         classes += ' msgbox-cancel-highlight';
       }
       return classes;
-    },
-    showCancelButton() {
-      return this.cancelButtonText !== CANCEL_TEXT;
     }
   },
 
